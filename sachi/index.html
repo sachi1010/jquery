@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ktm.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -68,10 +69,13 @@
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="1000">
                 <img src="images/bg1.jfif" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h3>Live Orange,Ride Orange</h3>
-                 <h1 id="blood">ORANGE BLOOD</h1>
-                 <button>Join the Ride Now</button>
+                <div class="carousel-caption" id="main">
+                  <div>
+                    <h3>Live Orange,Ride Orange</h3>
+                    <h1 id="blood" class="shake">ORANGE BLOOD</h1>
+                    <button id="Join">Join the Ride Now</button>
+                  </div>
+                  
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="1000">
@@ -79,7 +83,7 @@
                 <div class="carousel-caption">
                   <h3>Take The Long Way Home</h3>
                   <h1 id="blood">KTM 390 ADVENTURE</h1>
-                  <button>Book Now</button>
+                  <button id="book">Book Now</button>
                 </div>
               </div>
              
@@ -135,11 +139,11 @@
     </div>
 
     <div id="discover">
-        <h1>DISCOVER MORE</h1>
+        <h1 id="launch">DISCOVER MORE</h1>
         <div class="row">
             <!-- c1 -->
             <div class="card sm-12 col-md-3 col-lg-4" style="width: 18rem;">
-                <img src="images/c1.jfif" class="card-img-top" alt="...">
+                <img src="images/c1.jfif" class="card-img-top" alt="..." >
                 <div class="card-body">
                     <h6>#GETDUKED</h6>
                      <h4>KTM NAKED</h4>
@@ -165,28 +169,29 @@
     </div>
 </section>
 <section class="news">
-    <h1>KTM NEWS</h1>
+    <h1 id="launch">KTM NEWS</h1>
     <div id="bow">
                  <img src="images/newsimg.jfif" alt="" height="400px" width="1100px">
         <div>
-            <h2>KTM X-BOW</h2>
+            <h2 class="wobble">KTM X-BOW</h2>
             <button id="explore">Explore Now</button>
         </div>
     </div>
         <!--  -->
        <div id="ktm">
         <div class="power">
-            <img src="images/nimg2.jfif" alt="" height="400px" width="500px">
-            <h1>KTM POWERWEAR</h1>
+            <img src="images/nimg2.jfif" alt="" height="400px" width="580px">
+            <h1 class="parts">KTM POWERWEAR</h1>
         </div>
         <div class="power">
             <img src="images/nimg3.jfif" alt="" height="400px" width="500px">
-            <h1>KTM POWERPARTS</h1>
+            <h1 class="parts">KTM POWERPARTS</h1>
         </div>
        </div>
        <div class="news4">
 
-        <img src="images/nimg4.jfif" alt="" height="400px" width="1100px">
+        <!-- <img src="images/nimg4.jfif" alt="" height="400px" width="1100px"> -->
+         <video src="images/bike v.mp4" autoplay loop muted width="1100px"></video>
         <div>
             <p>UNLOCK YOUR BIKES FULL POTENTIAL</p>
             <h1>KTM TECH GUIDE</h1>
@@ -194,10 +199,85 @@
         </div>
 
        </div>
-         
-    
+         <!--  -->
+       <div class="row" id="read">
+        <div class="card sm-12 col-md-3 col-lg-4" style="width: 18rem;">
+          <img src="images/img1.jfif" class="card-img-top wave" alt="..." >
+          <div class="card-body">
+            <h6>16-MAR-2025</h6>
+          <h5>SPANISH POINTS HAUL FOR RED BULL KTM THROUGN CASTILLA-LA</h5>
+          </div>
+        </div>
+        <!--  -->
+        <div class="card sm-12 col-md-3 col-lg-4" style="width: 18rem;">
+          <img src="images/img2.jfif" class="card-img-top wave" alt="...">
+          <div class="card-body">
+            <h6>16-MAR-2025</h6>
+            <h5>ROCKSTAR ENERGY HUSQVARNA FACTORY RACING'S </h5>
+          </div>
+        </div>
+        <!--  -->
+        <div class="card sm-12 col-md-3 col-lg-4" style="width: 18rem;">
+          <img src="images/img3.jfif" class="card-img-top wave" alt="...">
+          <div class="card-body">
+           <h6>13-MAR-2025</h6>
+           <h5>MARC ANTONIE ROSSI FACING A SPELL ON THE MX2 SIDELINES</h5>
+          </div>
+        </div>
+       </div>
+         <button id="explore">READ MORE</button>
 </section>
+<footer>
+  <div>
+    <h2>THE COMPANY</h2>
+    <a href="">KTM AG</a>
+    <a href="">CONTACT</a>
+    <a href="">CAREERS</a>
+    <a href="">PRESS CENTER</a>
+    <a href="">PROCUREMENT</a>
+    <a href="">BRAND VALUES</a>
+  </div>
+  <div>
+    <h2>KTM WORLD</h2>
+    <a href="">NEWS</a>
+    <a href="">RACING</a>
+    <a href="">RIDE KTM</a>
+    <a href="">KTM MOTOHALL</a>
+    <a href="">KTM TECH GUIDE</a>
+    <a href="">KTM NEWS LETTER</a>
+  </div>
+  <div>
+    <h2>SERVICE</h2>
+    <a href="">SAFETY</a>
+    <a href="">MANUALS</a>
+    <a href="">MAINTENANCE</a>
+    <a href="">CONFIGURATOR</a>
+    <a href="">SPARE PARTS FINDER</a>
+    <a href="">SERVICE & SAFETY</a>
+  </div>
+  <div>
+    <h2>LEGAL</h2>
+    <a href="">IMPRINT</a>
+    <a href="">LEGAL NOTICE</a>
+    <a href="">TERMS OF USE</a>
+    <a href="">PRIVACY POLICY</a>
+    <a href="">CYBER SECURITY</a>
+    <a href="">CODE OF CONTACT</a>
+  </div>
+  <div class="contact">
+    <h2>CONNECT</h2>
+    <a href="" class="bi bi-facebook"></a>
+    <a href="" class="bi bi-instagram"></a>
+    <a href="" class="bi bi-youtube"></a>
+  </div>
+  
+</footer>
 
+<div class="copyright">
+  <hr>
+  <p>&copy copyright 2025 ktm sportmotorcycle</p>
+</div>
+<script src="ktm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
